@@ -61,7 +61,7 @@ ENTRYPOINT ["code-server", "--host", "0.0.0.0", "--auth", "password"]
 # #
 # # then if it is sucseful build you can run a container based on that image file
 # # docker run -p 1111:8080 -v ".:/workspace" --name container-name-xyz -d image-name-abc
-# # then if it is sucseful build you can run a container based on that image file with pasword
+# # then if it is sucseful build you can run a container based on that image file with this pasword for acces the server
 # # docker run -p 1111:8080 -v ".:/workspace" --name container-name-xyz -d -e PASSWORD=123456 image-name-abc
 
 # #
