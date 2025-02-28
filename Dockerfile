@@ -44,10 +44,10 @@ RUN useradd -m vscode-user
 USER vscode-user
 WORKDIR /home/vscode-user/workspace
 
-# Start VS Code Server
-ENTRYPOINT ["code-server", "--host", "0.0.0.0", "--auth", "none"]
-
-
+# Start VS Code Server no pasword requerd
+#ENTRYPOINT ["code-server", "--host", "0.0.0.0", "--auth", "none"]
+# Start VS Code Server with pasword ( the pasword is set below in the dock run comand!!!)
+ENTRYPOINT ["code-server", "--host", "0.0.0.0", "--auth", "password"]
 # # run the folowing comands in visual studio code terminal
 # #
 # # first you must build a image
@@ -61,7 +61,12 @@ ENTRYPOINT ["code-server", "--host", "0.0.0.0", "--auth", "none"]
 # #
 # # then if it is sucseful build you can run a container based on that image file
 # # docker run -p 1111:8080 -v ".:/workspace" --name container-name-xyz -d image-name-abc
+# # then if it is sucseful build you can run a container based on that image file with pasword
+# # docker run -p 1111:8080 -v ".:/workspace" --name container-name-xyz -d -e PASSWORD=123456 image-name-abc
 
+# #
+# # show runing containers
+# # docker ps -a
 
 # #
 # # show runing containers
