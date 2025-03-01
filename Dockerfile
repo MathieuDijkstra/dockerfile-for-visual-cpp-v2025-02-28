@@ -26,6 +26,10 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     # C++ compiler
     g++ \
+    # gcc: GNU Compiler Collection (for compiling C programs)
+    gcc \
+    # make: Build automation tool to compile and build programs using makefiles
+    make \
     # cmake Build system for managing complex builds
     cmake \
     # OpenGL development libraries (useful for graphics)
@@ -38,9 +42,9 @@ RUN apt-get update && apt-get install -y \
     python3 \
     #  Python package installer
     python3-pip \
-    # Python development headers
+   # python3-dev: Development libraries and headers for building Python C extensions
     python3-dev \
-    # Python virtual environment support
+     # python3-venv: Python virtual environment package for creating isolated Python environments
     python3-venv \
       # qtbase5-dev: Core development libraries for Qt 5 (needed for building Qt applications)
       qtbase5-dev \
